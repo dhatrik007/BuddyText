@@ -6,7 +6,9 @@ import "./Search.css"
 
 const Search = ({filteredFun, addFriend}) => {
     const {loggedInUser, users} = useContext(UserContext);
+    // eslint-disable-next-line no-unused-vars
     const [searchedUser, setSearchedUser] = useState([])
+    // eslint-disable-next-line no-unused-vars
     const [isFriend, setIsFriend] = useState(false)
     const [inputValue, setInputValue] = useState("")
 

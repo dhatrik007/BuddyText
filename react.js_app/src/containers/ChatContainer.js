@@ -9,6 +9,7 @@ import './ChatContainer.css'
 const ChatContainer = ({socket, fetchChats}) => {
 
     const [friends, setFriends] = useState([]);
+    // eslint-disable-next-line no-unused-vars
     const {loggedInUser, setLoggedInUser, chats, users} = useContext(UserContext);
 
     const navigate = useNavigate()
@@ -73,6 +74,7 @@ const ChatContainer = ({socket, fetchChats}) => {
 
     useEffect(() => {
         fetchChats()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [loggedInUser.friends.length, currentChat.messages])
     
     const currentFriendChat = (friendChat) => {
