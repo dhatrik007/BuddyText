@@ -25,7 +25,7 @@ const ChatContainer = ({socket, fetchChats}) => {
     })
 
     const addFriend = async (friend) => {
-        const response = await fetch(`http://localhost:4000/addfriend/${loggedInUser._id}`, {
+        const response = await fetch(`https://express-buddytext.onrender.com/addfriend/${loggedInUser._id}`, {
             method: "PATCH",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(friend)
@@ -44,7 +44,7 @@ const ChatContainer = ({socket, fetchChats}) => {
     }
 
     const deleteFriend = async (friend) => {
-        const response = await fetch(`http://localhost:4000/deletefriend/${loggedInUser._id}`, {
+        const response = await fetch(`https://express-buddytext.onrender.com/deletefriend/${loggedInUser._id}`, {
             method: "DELETE",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(friend)
@@ -61,7 +61,7 @@ const ChatContainer = ({socket, fetchChats}) => {
         const chat = filteredChats.find(chat => {
             return chat.users.findIndex(user => user._id === friend._id) !== -1
         })
-        await fetch(`http://localhost:4000/chat/${chat._id}`, {
+        await fetch(`https://express-buddytext.onrender.com/chat/${chat._id}`, {
             method: "DELETE",
             headers: {"Content-Type": "application/json"}
         })

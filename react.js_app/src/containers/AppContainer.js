@@ -10,22 +10,22 @@ const AppContainer = () => {
     const [users, setUsers] = useState([]);
     const [chats, setChats] = useState([]);
     
-    const socket = io.connect("http://localhost:4000");
+    const socket = io.connect("https://express-buddytext.onrender.com");
 
     const fetchUsers = async () => {
-        const response = await fetch('http://localhost:4000/user');
+        const response = await fetch('https://express-buddytext.onrender.com/user');
         const userData = await response.json();
         setUsers(userData);
     }
 
     const fetchChats = async () => {
-        const response = await fetch('http://localhost:4000/chat');
+        const response = await fetch('https://express-buddytext.onrender.com/chat');
         const chatData = await response.json();
         setChats(chatData);
     }
 
     const addUser = async (newUser) => {
-        const response = await fetch("http://localhost:4000/register", {
+        const response = await fetch("https://express-buddytext.onrender.com/register", {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newUser)
