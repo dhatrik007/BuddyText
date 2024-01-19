@@ -5,14 +5,25 @@
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
+    "@mantine/carousel": "^7.4.2",
+    "@mantine/charts": "^7.4.2",
+    "@mantine/core": "^7.4.2",
+    "@mantine/dropzone": "^7.4.2",
+    "@mantine/form": "^7.4.2",
+    "@mantine/hooks": "^7.4.2",
+    "@mantine/notifications": "^7.4.2",
     "@mui/material": "^5.10.11",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "aphrodite": "^2.4.0",
+    "embla-carousel-react": "^8.0.0-rc19",
     "react": "^18.2.0",
+    "react-animated-cursor": "^2.11.2",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "react-scroll-to-bottom": "^4.2.0",
+    "recharts": "2",
     "socket.io-client": "^4.5.3",
     "web-vitals": "^2.1.4"
   },
@@ -42,6 +53,9 @@
     ]
   },
   "devDependencies": {
+    "postcss": "^8.4.33",
+    "postcss-preset-mantine": "^1.12.3",
+    "postcss-simple-vars": "^7.0.1",
     "react-router-dom": "^6.4.2"
   }
 }
