@@ -5,7 +5,7 @@ const http = require("http");
 const cors = require("cors");
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://dhatrik007:<password>@cluster0.nwparsy.mongodb.net/chatapp'); //connect to db
+mongoose.connect('mongodb+srv://dhatrik007:Nikhil1998@cluster0.nwparsy.mongodb.net/chatapp'); //connect to db
 const db = mongoose.connection;
 db.on('error', (error)=> console.error(error));
 db.once('open', () => console.log('Connected to database'));
